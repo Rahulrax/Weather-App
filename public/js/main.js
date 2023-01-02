@@ -18,7 +18,15 @@ const getclick = async(event) => {
          city_name.innerText="plz write a city name";
          datahide.classList.add('data_hide');
          datahideTop.classList.add('data_hide');
-      } else {
+      } else if(cityVal=="Sonagachi")
+      {
+        city_name.innerText="Too hot to show the temperature!!";
+        datahide.classList.add('data_hide');
+        datahideTop.classList.add('data_hide');
+
+      }
+      else
+      {
       try {
 
         let url =`https://api.openweathermap.org/data/2.5/weather?q=${cityVal}&units=mertic&appid=8d98433d60d6eefd652235336c307dfa`;
